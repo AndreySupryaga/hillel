@@ -1,2 +1,2 @@
-let res = prompt('Ваше імʼя');
-alert(res);
+let name = prompt('Ваше імʼя');
+alert(`Hello  ${name}`);
