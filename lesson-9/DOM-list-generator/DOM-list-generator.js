@@ -1,7 +1,7 @@
 'use strict';
 
 const arr = ['1', '2', ['2.1', '2.2', ['2.2.1', '2.2.2'], '2.3'], '3'];
-const ul = document.querySelector('#list');
+const container = document.querySelector('#container');
 
 function generateList(item) {
     if (Array.isArray(item)) {
@@ -22,4 +22,4 @@ function generateList(item) {
 }
 
 const list = generateList(arr);
-ul.appendChild(list);
+container.appendChild(list);
