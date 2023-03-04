@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM modifying</title>
+    <style>
+        .container {
+            border: 1px solid #ccc;
+            padding: 0 1rem 1rem;
+        }
+
+        .message {
+            border: 1px solid #ccc;
+            padding: 1rem;
+        }
+
+        .message:not(:last-child) {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h3>Feed</h3>
+</div>
+
+<script src="js.js"></script>
+</body>
+</html>
