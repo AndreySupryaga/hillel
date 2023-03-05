@@ -1,25 +1,26 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>События focus и blur</title>
+    <title>Події focus та blur</title>
     <script>
-
         window.onload = function () {
-            for (var i = 0; i < document.forms[0].elements.length; i++) {
+            for (let i = 0; i < document.forms[0].elements.length; i++) {
 
                 // cобытие на получение фокуса.
                 document.forms[0].elements[i].onfocus = function () {
-                    this.style.border = "1px solid red";
+                    this.style.border = '2px solid red';
                 }
 
                 // событие на потерю фокуса.
                 document.forms[0].elements[i].onblur = function () {
-                    this.style.border = "1px dotted green";
+                    this.style.border = '2px dotted green';
                 }
             }
         }
-
     </script>
+    <style>
+        input { outline: none}
+    </style>
 </head>
 <body>
     <form>

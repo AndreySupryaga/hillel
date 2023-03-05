@@ -3,12 +3,12 @@
 <head>
     <title>preventDefault</title>
     <script>
-        window.addEventListener("load", function () {
-            document.forms[0].addEventListener("submit", function (e) {
+        window.addEventListener('load', function () {
+            document.forms[0].addEventListener('submit', function (e) {
                 if (document.forms[0].name.value.length == 0) {
                     // Если поле ввода пустое отменить действие по умолчанию, которое связанно с событием.
                     e.preventDefault();
-                    alert("Введите имя");
+                    alert('Введіть ім\'я');
                 }
             });
 

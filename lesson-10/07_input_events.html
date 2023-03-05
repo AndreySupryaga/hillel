@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Распространение событий DOM</title>
+    <title>Поширення подій DOM</title>
 
     <script>
         window.onload = function () {
@@ -26,7 +26,7 @@
             handleCheckboxChange();
 
             function handleCheckboxChange() {
-                checkboxText.textContent = checkbox.checked ? 'Чекбокс отмечен' : 'Чекбокс пустой';
+                checkboxText.textContent = checkbox.checked ? 'Чекбокс відзначений' : 'Чекбокс порожній';
             }
             checkbox.addEventListener('change', handleCheckboxChange);
         }

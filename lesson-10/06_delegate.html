@@ -10,18 +10,21 @@
             float:left;
             margin:10px;
         }
+
+        #wrapper p.red {
+            background-color: red;
+        }
     </style>
 
     <script>
 
-        window.addEventListener("load", function () {
+        window.addEventListener('load', function () {
+            const wrapper = document.getElementById('wrapper');
 
-            var wrapper = document.getElementById("wrapper");
-
-            // e - объект события которое возникло в элементе wrapper или в его дочерних элементах
-            wrapper.addEventListener("click", function (e) {
-                // target - элемент, который был инициатором события.
-                e.target.style.backgroundColor = "red";
+            // e - об'єкт події, яка виникла в елементі wrapper або в його дочірніх елементах
+            wrapper.addEventListener('click', function (e) {
+                // target - елемент, який був ініціатором події.
+                e.target.classList.toggle('red');
             }, false);
 
         }, false);

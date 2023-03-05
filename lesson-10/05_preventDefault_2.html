@@ -4,13 +4,13 @@
     <title>preventDefault</title>
     <script>
 
-        window.addEventListener("load", function () {
+        window.addEventListener('load', function () {
             let input = document.querySelector('input');
             let log = document.querySelector('#log');
 
             input.addEventListener('keypress', function (e) {
                 if (e.charCode <= '47' || e.charCode >= '57') {
-                    // если нажатая кнопка не 0 - 9 отменить действие по умолчанию.
+                    // якщо натиснута кнопка не 0 - 9 скасувати дію за умовчанням.
                     e.preventDefault();
                 }
                 log.innerText = `Key pressed: ${String.fromCharCode(e.charCode)}\ncharCode: ${e.charCode}`;
