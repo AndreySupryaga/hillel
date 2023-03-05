@@ -4,7 +4,6 @@
     {
         author: string,
         time: string,
-        text: string
      }
  */
 fetch('../mock-data.json')
@@ -20,10 +19,13 @@ const messageTpl = `<div class="message">
 const messageContainer = document.querySelector('.messages-container');
 
 function renderData(data) {
-    messageContainer.innerHTML = data.map(item =>
-        messageTpl
-            .replace('{author}', item.author)
-            .replace('{time}', item.time)
-            .replace('{message}', item.text)
-    ).join('');
+    messageContainer.insertAdjacentHTML(
+        'beforeend',
+        data.map(item =>
+            messageTpl
+                .replace('{author}', item.author)
+                .replace('{time}', item.time)
+                .replace('{message}', item.text)
+        ).join('')
+    );
 }

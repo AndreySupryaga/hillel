@@ -12,15 +12,16 @@ fetch('../mock-data.json')
     .then(renderData);
 
 const messageContainer = document.querySelector('.messages-container');
+const messageTpl = document.querySelector('.message-template');
 
 function renderData(data) {
     const fragment = new DocumentFragment();
-
-    for (const item of data) {
-        const el = document.createElement('div');
-        el.classList.add('message');
-        el.innerHTML = item.text;
+    data.forEach(item => {
+        const el = messageTpl.content.cloneNode(true);
+        el.querySelector('.author').innerText = item.author;
+        el.querySelector('.time').innerText = item.time;
+        el.querySelector('.text').innerText = item.text;
         fragment.append(el);
-    }
+    })
     messageContainer.append(fragment);
 }
