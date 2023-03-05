@@ -7,6 +7,7 @@
         text: string
      }
  */
+
 fetch('../mock-data.json')
     .then(response => response.json())
     .then(renderData);
