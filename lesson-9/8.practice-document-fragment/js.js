@@ -14,10 +14,13 @@ fetch('../mock-data.json')
 const tweetsContainer = document.querySelector('.messages-container');
 
 function renderData(data) {
+    const fragment = new DocumentFragment();
+
     for (const item of data) {
         const el = document.createElement('div');
         el.classList.add('message');
         el.innerHTML = item.message;
-        tweetsContainer.append(el);
+        fragment.append(el);
     }
+    tweetsContainer.append(fragment);
 }
