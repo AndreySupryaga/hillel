@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>preventDefault</title>
+    <script>
+
+        window.addEventListener("load", function () {
+            let input = document.querySelector('input');
+            let log = document.querySelector('#log');
+
+            input.addEventListener('keypress', function (e) {
+                if (e.charCode <= '47' || e.charCode >= '57') {
+                    // если нажатая кнопка не 0 - 9 отменить действие по умолчанию.
+                    e.preventDefault();
+                }
+                log.innerText = `Key pressed: ${String.fromCharCode(e.charCode)}\ncharCode: ${e.charCode}`;
+            });
+        });
+
+    </script>
+</head>
+<body>
+<input type="text"/>
+<p id="log"></p>
+</body>
+</html>

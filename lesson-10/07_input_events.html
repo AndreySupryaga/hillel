@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Распространение событий DOM</title>
+
+    <script>
+        window.onload = function () {
+
+            const input = document.getElementById('my-input');
+            const clearButton = document.getElementById('clear-button');
+            const p = document.getElementById('my-input-text');
+
+            function handleUserInput() {
+                p.textContent = input.value;
+            }
+            function handleClearClick() {
+                p.textContent = '';
+                input.value = '';
+            }
+
+            input.addEventListener('input', handleUserInput);
+            clearButton.addEventListener('click', handleClearClick);
+
+            const checkbox = document.getElementById('my-checkbox');
+            const checkboxText = document.getElementById('checkbox-text');
+            handleCheckboxChange();
+
+            function handleCheckboxChange() {
+                checkboxText.textContent = checkbox.checked ? 'Чекбокс отмечен' : 'Чекбокс пустой';
+            }
+            checkbox.addEventListener('change', handleCheckboxChange);
+        }
+
+    </script>
+</head>
+<body>
+    <input id="my-input" type="text" value="Text">
+    <button id="clear-button">Clear</button>
+    <p id="my-input-text">Text</p>
+
+    <input id="my-checkbox" type="checkbox">
+    <p id="checkbox-text"></p>
+</body>
+</html>
