@@ -1,0 +1,26 @@
+.container {
+    border: 1px solid #ccc;
+    padding: 0 1rem 1rem;
+}
+
+.message {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.author, .time {
+    font-weight: 600;
+}
+
+.text {
+    display: flex;
+    width: 100%;
+    padding-top: 0.5rem;
+}
+
+.message:not(:last-child) {
+    margin-bottom: 0.5rem;
+}

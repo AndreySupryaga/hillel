@@ -2,7 +2,7 @@
 
 /*
     {
-        name: string,
+        author: string,
         message: string,
         time: string
      }

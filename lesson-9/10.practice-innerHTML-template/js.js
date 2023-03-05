@@ -15,10 +15,6 @@ const tweetsContainer = document.querySelector('.messages-container');
 
 function renderData(data) {
     tweetsContainer.innerHTML = data.map(item =>
-        `<div class="message">
-            <span class="author">${item.author}</span>
-            <span class="time">${item.time}</span>
-            <span class="text">${item.message}</span>
-        </div>`
+        `<div class="message">${item.message}</div>`
     ).join('');
 }

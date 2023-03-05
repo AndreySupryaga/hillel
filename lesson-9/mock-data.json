@@ -1,76 +1,76 @@
 [
     {
-        "name": "Celia Ortiz",
+        "author": "Celia Ortiz",
         "message": "duis ea culpa esse eiusmod sunt officia adipisicing pariatur Lorem aliquip consequat exercitation cupidatat amet",
         "time": "27/01/2023"
     },
     {
-        "name": "Erika Skinner",
+        "author": "Erika Skinner",
         "message": "reprehenderit dolor quis anim proident do incididunt velit qui laborum eu qui consequat ullamco minim",
         "time": "26/02/2023"
     },
     {
-        "name": "Cruz Moses",
+        "author": "Cruz Moses",
         "message": "nostrud aute enim non commodo qui eu dolore eu occaecat Lorem proident proident sint qui",
         "time": "10/02/2023"
     },
     {
-        "name": "Jeannette Rosa",
+        "author": "Jeannette Rosa",
         "message": "amet elit tempor quis labore ad non reprehenderit consectetur consectetur officia Lorem eu amet laborum",
         "time": "17/02/2023"
     },
     {
-        "name": "Amelia Medina",
+        "author": "Amelia Medina",
         "message": "id commodo irure aliquip officia consequat eu tempor laboris elit aute proident occaecat et velit",
         "time": "20/02/2023"
     },
     {
-        "name": "Norman Oliver",
+        "author": "Norman Oliver",
         "message": "voluptate ea voluptate exercitation in aliqua incididunt culpa adipisicing laboris exercitation voluptate occaecat anim id",
         "time": "24/02/2023"
     },
     {
-        "name": "Deborah Sellers",
+        "author": "Deborah Sellers",
         "message": "mollit aliqua quis ut reprehenderit non Lorem amet voluptate ipsum laboris Lorem laboris reprehenderit anim",
         "time": "27/01/2023"
     },
     {
-        "name": "Leah Shields",
+        "author": "Leah Shields",
         "message": "et cillum sint tempor velit ullamco sit ut mollit elit magna fugiat culpa officia laboris",
         "time": "02/02/2023"
     },
     {
-        "name": "Nita Klein",
+        "author": "Nita Klein",
         "message": "qui cupidatat amet Lorem esse est do consequat labore qui nostrud ad eu nostrud ad",
         "time": "19/02/2023"
     },
     {
-        "name": "Velazquez Barron",
+        "author": "Velazquez Barron",
         "message": "elit non eu ea ea veniam officia culpa eu officia veniam irure nostrud velit pariatur",
         "time": "14/01/2023"
     },
     {
-        "name": "Norma Mayo",
+        "author": "Norma Mayo",
         "message": "nulla qui dolore dolor ex cupidatat exercitation dolore nulla laborum ex officia irure ullamco laborum",
         "time": "14/02/2023"
     },
     {
-        "name": "Moore Lopez",
+        "author": "Moore Lopez",
         "message": "ad sit occaecat consectetur duis nulla minim reprehenderit dolore et est ut nostrud nostrud deserunt",
         "time": "13/02/2023"
     },
     {
-        "name": "Grant Montoya",
+        "author": "Grant Montoya",
         "message": "cillum ad excepteur Lorem ullamco magna excepteur aute labore occaecat in dolor eiusmod nisi proident",
         "time": "17/01/2023"
     },
     {
-        "name": "Leila Green",
+        "author": "Leila Green",
         "message": "dolor elit nulla in et in cupidatat esse aute irure labore fugiat voluptate cupidatat dolore",
         "time": "15/02/2023"
     },
     {
-        "name": "Guadalupe Floyd",
+        "author": "Guadalupe Floyd",
         "message": "Lorem id consequat sit laborum sit esse ea Lorem est do amet ut laboris ex",
         "time": "02/03/2023"
     }
