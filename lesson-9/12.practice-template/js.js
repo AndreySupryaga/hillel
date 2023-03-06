@@ -25,5 +25,4 @@ function renderData(data) {
         fragment.append(el);
     })
     messageContainer.append(fragment);
-
 }

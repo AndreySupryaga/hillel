@@ -25,7 +25,7 @@ let data = [
     {text: 'Item 3'}
 ];
 
-let ul = generateUL(data);
+const ul = generateUL(data);
 document.body.append(ul);
 
 function generateUL(data) {
