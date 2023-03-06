@@ -32,6 +32,9 @@ function renderData(data) {
 
 function renderDataWithParser(tmpl, data) {
     messageContainer.innerHTML = data.map(getParsedHtml.bind(null, tmpl)).join('');
+    // messageContainer.innerHTML = data.map((item) => {
+    //     return getParsedHtml(tmpl, item);
+    // }).join('');
 }
 
 function getParsedHtml(tmpl, data) {
