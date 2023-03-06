@@ -1,13 +1,5 @@
-'use strict';
+const element = document.getElementById('first');
 
-const msg = document.querySelector('.message');
-msg.setAttribute('id', 'new-id')
-msg.removeAttribute('height')
-
-// Щоб працював boolean аттрибут можна додати любе значення
-
-const checkbox = document.querySelector('.checkbox');
-checkbox.setAttribute('checked', '')
-checkbox.removeAttribute('disabled')
-
-console.log(element.closest('.target'));
+element.addEventListener('click', function (event) {
+    event.stopPropagation();
+});

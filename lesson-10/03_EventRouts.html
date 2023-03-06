@@ -21,26 +21,20 @@
             const e2 = document.getElementById('second');
             const e3 = document.getElementById('third');
 
-            e1.addEventListener('click',
-                function () {
-                    this.style.backgroundColor = 'green';
-                    alert('Обробник DIV 1');
-                },
-            isTunnel);
+            e1.addEventListener('click', function () {
+                this.style.backgroundColor = 'green';
+                alert('Обробник DIV 1');
+            }, isTunnel);
 
-            e2.addEventListener('click',
-                function () {
-                    this.style.backgroundColor = 'yellow';
-                    alert('Обробник DIV 2');
-                },
-            isTunnel);
+            e2.addEventListener('click', function () {
+                this.style.backgroundColor = 'yellow';
+                alert('Обробник DIV 2');
+            }, isTunnel);
 
-            e3.addEventListener('click',
-                function () {
-                    this.style.backgroundColor = 'red';
-                    alert('Обробник DIV 3');
-                },
-            isTunnel);
+            e3.addEventListener('click', function () {
+                this.style.backgroundColor = 'red';
+                alert('Обробник DIV 3');
+            }, isTunnel);
         }
 
     </script>
@@ -54,14 +48,14 @@
     </style>
 </head>
 <body>
-    Первый
-    <div id="first">
-        Второй
-        <div id="second">
-            Третий
-            <div id="third">
-            </div>
+Первый
+<div id="first">
+    Второй
+    <div id="second">
+        Третий
+        <div id="third">
         </div>
     </div>
+</div>
 </body>
 </html>

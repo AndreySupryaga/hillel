@@ -1,6 +1,8 @@
 .container {
     border: 1px solid #ccc;
     padding: 0 1rem 1rem;
+    max-width: 740px;
+    margin: 0 auto;
 }
 
 .message {
