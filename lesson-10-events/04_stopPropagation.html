@@ -11,11 +11,10 @@
             const e2 = document.getElementById('second');
             const e3 = document.getElementById('third');
 
-            e1.addEventListener('click', function (e) { // e - параметр хранит объект с информацией о событии.
+            e1.addEventListener('click', function (e) {
+                e.stopPropagation();
                 this.style.backgroundColor = 'green';
                 alert('Обробник DIV 1');
-                // прекращение дальнейшего маршрута события.
-                e.stopPropagation();
             }, isTunnel);
 
             e2.addEventListener('click', function (e) {
@@ -25,9 +24,9 @@
             }, isTunnel);
 
             e3.addEventListener('click', function (e) {
+                e.stopPropagation();
                 this.style.backgroundColor = 'red';
                 alert('Обробник DIV 3');
-                e.stopPropagation();
             }, isTunnel);
         }
 
