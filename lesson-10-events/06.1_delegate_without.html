@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Delegate events</title>
+    <script>
+        window.addEventListener('load', function () {
+            /* 1. Знаходимо всі кнопки для видалення статей */
+            const deleteButtons = document.querySelectorAll('article>button');
+            /* 2. Додаємо обробник */
+            [].forEach.call(deleteButtons, function(btn) {
+                btn.addEventListener('click', handleDeleteBtnClick);
+            });
+
+            function handleDeleteBtnClick(event) {
+                /* event.target це кнопка, а нам потрібний <article> */
+                const articleNodeToDelete = event.target.parentElement;
+                /* видалимо обробник події з кнопки, що видаляється! */
+                event.target.removeEventListener('click', handleDeleteBtnClick);
+                /* видаляємо <article> з DOM */
+                articleNodeToDelete.remove();
+            }
+        });
+
+    </script>
+</head>
+<body>
+<div class="article-list">
+    <article>Статья #1 <button>x</button></article>
+    <article>Статья #2 <button>x</button></article>
+    <article>Статья #3 <button>x</button></article>
+</div>
+</body>
+</html>

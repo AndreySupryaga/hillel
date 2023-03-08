@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Delegate events</title>
+    <script>
+        window.addEventListener('load', function () {
+            const articleListNode = document.querySelector('.article-list');
+            articleListNode.addEventListener('click', handleDeleteBtnClick);
+
+            function handleDeleteBtnClick(event) {
+                /*
+                  event.target це що завгодно всередині .article-list,
+                  треба перевірити, що event.target – це саме наша кнопка
+                */
+                if (event.target.tagName !== 'BUTTON') {
+                    return; /* якщо це була не кнопка, подію обробляти не треба */
+                }
+
+                const articleNodeToDelete = event.target.parentElement;
+                /* видалимо <article> з DOM */
+                articleNodeToDelete.remove();
+                // articleListNode.removeChild(articleNodeToDelete);
+            }
+        });
+    </script>
+</head>
+<body>
+<div class="article-list">
+    <article>Статья #1 <button>x</button></article>
+    <article>Статья #2 <button>x</button></article>
+    <article>Статья #3 <button>x</button></article>
+</div>
+</body>
+</html>
