@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Events</title>
+    <style>
+        .container {
+            display: flex;
+            width: 500px;
+            height: 500px;
+            border: 2px solid #ccc;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            const container = document.querySelector('.container');
+
+            container.addEventListener('click', function () {
+                console.log('click', this);
+            });
+
+            container.addEventListener('contextmenu', function () {
+                console.log('contextmenu', this);
+            });
+
+            container.addEventListener('mouseover', function (e) {
+                console.log('X', e.offsetX, 'Y', e.offsetY);
+            });
+
+            container.addEventListener('mouseout', function (e) {
+                console.log('X', e.offsetX, 'Y', e.offsetY);
+            });
+
+            // container.addEventListener('mousemove', function (e) {
+            //     console.log('X', e.offsetX, 'Y', e.offsetY);
+            // });
+
+            container.addEventListener('mousedown', function () {
+                console.log('mousedown', this);
+            });
+
+            container.addEventListener('mouseup', function () {
+                console.log('mouseup', this);
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="container">Hello world!</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>dataset</title>
+    <script type="text/javascript">
+        window.addEventListener('DOMContentLoaded', init);
+
+        function init() {
+            const buttons = document.querySelectorAll('.btn');
+            const textContainer = document.querySelector('.text-container');
+
+            buttons.forEach(item => {
+                item.addEventListener('click', handler);
+            })
+
+            function handler() {
+                // dataset - властивість, що дозволяє звернутися до атрибутів data-*
+                // інший спосіб отримання атрибуту - this.getAttribute('data-chars-allowed')
+
+                textContainer.innerHTML = this.dataset.textValue;
+            }
+        }
+    </script>
+</head>
+<body>
+<button class="btn" data-text-value="Button 1 was clicked">Button 1</button>
+<button class="btn" data-text-value="Button 2 was clicked">Button 2</button>
+<p class="text-container"></p>
+</body>
+</html>

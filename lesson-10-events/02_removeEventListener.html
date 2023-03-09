@@ -7,8 +7,8 @@
             const btn1 = document.getElementById('button1');
             const btn2 = document.getElementById('button2');
 
-            btn1.addEventListener('click', handler, false);
-            btn2.addEventListener('click', removeHandler, false);
+            btn1.addEventListener('click', handler);
+            btn2.addEventListener('click', removeHandler);
 
             function handler() {
                 alert('Обробник події натискання кнопки');
