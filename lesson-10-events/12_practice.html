@@ -3,21 +3,51 @@
 <head>
     <title>Delegate events</title>
     <script>
+        const data = {
+            fruits: [
+                {name: 'apple', count: 21},
+                {name: 'banana', count: 12},
+                {name: 'kiwi', count: 7}
+            ],
+            vegetables: [
+                {name: 'carrot', count: 23},
+                {name: 'cucumber', count: 20},
+                {name: 'tomato', count: 41},
+                {name: 'cabbage', count: 7}
+            ]
+        }
         window.addEventListener('load', function () {
-            const wrapper = document.getElementById('wrapper');
+            const btns = document.querySelectorAll('.btn');
+            const container = document.querySelector('.container');
 
-            // e - об'єкт події, яка виникла в елементі wrapper або в його дочірніх елементах
-            wrapper.addEventListener('click', function (e) {
-                // target - елемент, який був ініціатором події.
-                e.target.classList.toggle('red');
-                // event.target.classList.toggle('red');
-            });
+            btns.forEach(btn => btn.addEventListener('click', handler))
+
+            function handler() {
+                const key = this.dataset.dataId;
+                const selectedData = data[key];
+                container.innerHTML = creteHTML(selectedData);
+            }
+
+            function creteHTML(data) {
+                const body = data.map(item => {
+                    return `<tr><td>${item.name}</td><td>${item.count}</td></tr>`
+                }).join('');
+
+                return `<table>
+                            <tr>
+                                <th>name</th>
+                                <th>count</th>
+                            </tr>
+                            ${body}
+                        </table>`
+            }
         });
 
     </script>
 </head>
 <body>
-<button class="btn">Collection 1</button>
-<button class="btn">Collection 2</button>
+<button class="btn" data-data-id="fruits">Show fruits</button>
+<button class="btn" data-data-id="vegetables">Show vegetables</button>
+<div class="container"></div>
 </body>
 </html>
