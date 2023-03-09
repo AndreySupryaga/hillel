@@ -18,9 +18,9 @@
             }, isTunnel);
 
             e2.addEventListener('click', function (e) {
+                e.stopPropagation();
                 this.style.backgroundColor = 'yellow';
                 alert('Обробник DIV 2');
-                e.stopPropagation();
             }, isTunnel);
 
             e3.addEventListener('click', function (e) {
