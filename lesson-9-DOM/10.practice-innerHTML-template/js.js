@@ -1,5 +1,6 @@
 'use strict';
 
+
 /*
     {
         author: string,
@@ -13,6 +14,8 @@ const messageTpl = `<div class="message">
             <span class="time">{time}</span>
             <span class="text">{text}</span>
         </div>`;
+
+const data = [];
 
 fetch('../mock-data.json')
     .then(response => response.json())
