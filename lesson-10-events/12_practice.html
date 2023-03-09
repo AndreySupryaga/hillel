@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Delegate events</title>
+    <script>
+        window.addEventListener('load', function () {
+            const wrapper = document.getElementById('wrapper');
+
+            // e - об'єкт події, яка виникла в елементі wrapper або в його дочірніх елементах
+            wrapper.addEventListener('click', function (e) {
+                // target - елемент, який був ініціатором події.
+                e.target.classList.toggle('red');
+                // event.target.classList.toggle('red');
+            });
+        });
+
+    </script>
+</head>
+<body>
+<button class="btn">Collection 1</button>
+<button class="btn">Collection 2</button>
+</body>
+</html>
