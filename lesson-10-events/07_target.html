@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>target VS currentTarget</title>
+    <style>
+        div {
+            border: 3px solid gray;
+            padding: 50px;
+            background-color: white;
+        }
+    </style>
+
+    <script>
+        window.onload = function () {
+            const e1 = document.getElementById('first');
+            const e2 = document.getElementById('second');
+            const e3 = document.getElementById('third');
+
+            e1.addEventListener('click', handler);
+            e2.addEventListener('click', handler);
+            e3.addEventListener('click', handler);
+
+            function handler(e) {
+                console.log('third target', e.target);
+                console.log('third currentTarget', e.currentTarget);
+            }
+        }
+    </script>
+</head>
+<body>
+Перший
+<div id="first">
+    Другий
+    <div id="second">
+        Третій
+        <div id="third">
+        </div>
+    </div>
+</div>
+</body>
+</html>
