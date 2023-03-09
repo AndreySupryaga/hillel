@@ -12,7 +12,7 @@
                   event.target це що завгодно всередині .article-list,
                   треба перевірити, що event.target – це саме наша кнопка
                 */
-                if (event.target.tagName !== 'BUTTON') {
+                if (event.target.classList.contains('delete-btn')) {
                     return; /* якщо це була не кнопка, подію обробляти не треба */
                 }
 
@@ -26,9 +26,9 @@
 </head>
 <body>
 <div class="article-list">
-    <article>Стаття #1 <button>x</button></article>
-    <article>Стаття #2 <button>x</button></article>
-    <article>Стаття #3 <button>x</button></article>
+    <article>Стаття #1 <button class="delete-btn">x</button></article>
+    <article>Стаття #2 <button class="delete-btn">x</button></article>
+    <article>Стаття #3 <button class="delete-btn">x</button></article>
 </div>
 </body>
 </html>
