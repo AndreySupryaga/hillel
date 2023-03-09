@@ -13,6 +13,7 @@
             function handleUserInput() {
                 p.textContent = input.value;
             }
+
             function handleClearClick() {
                 p.textContent = '';
                 input.value = '';
@@ -23,12 +24,13 @@
 
             const checkbox = document.getElementById('my-checkbox');
             const checkboxText = document.getElementById('checkbox-text');
+
             handleCheckboxChange();
+            checkbox.addEventListener('change', handleCheckboxChange);
 
             function handleCheckboxChange() {
                 checkboxText.textContent = checkbox.checked ? 'Чекбокс відзначений' : 'Чекбокс порожній';
             }
-            checkbox.addEventListener('change', handleCheckboxChange);
         }
 
     </script>
