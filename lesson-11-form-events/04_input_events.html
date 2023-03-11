@@ -1,29 +1,30 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Поширення подій DOM</title>
+    <title>Input Events</title>
 
     <script>
-        window.onload = function () {
 
-            const input = document.getElementById('my-input');
-            const clearButton = document.getElementById('clear-button');
-            const p = document.getElementById('my-input-text');
+        window.addEventListener('DOMContentLoaded', function () {
 
-            function handleUserInput() {
-                p.textContent = input.value;
-            }
-
-            function handleClearClick() {
-                p.textContent = '';
-                input.value = '';
-            }
+            const input = document.querySelector('.my-input');
+            const clearButton = document.querySelector('.clear-button');
+            const textContainer = document.querySelector('.my-input-text');
 
             input.addEventListener('input', handleUserInput);
             clearButton.addEventListener('click', handleClearClick);
 
-            const checkbox = document.getElementById('my-checkbox');
-            const checkboxText = document.getElementById('checkbox-text');
+            function handleUserInput() {
+                textContainer.textContent = input.value;
+            }
+
+            function handleClearClick() {
+                textContainer.textContent = '';
+                input.value = '';
+            }
+
+            const checkbox = document.querySelector('.my-checkbox');
+            const checkboxText = document.querySelector('.checkbox-text');
 
             handleCheckboxChange();
             checkbox.addEventListener('change', handleCheckboxChange);
@@ -31,16 +32,16 @@
             function handleCheckboxChange() {
                 checkboxText.textContent = checkbox.checked ? 'Чекбокс відзначений' : 'Чекбокс порожній';
             }
-        }
+        });
 
     </script>
 </head>
 <body>
-    <input id="my-input" type="text" value="Text">
-    <button id="clear-button">Clear</button>
-    <p id="my-input-text">Text</p>
+    <input class="my-input" type="text">
+    <button class="clear-button">Clear</button>
+    <p class="my-input-text"></p>
 
-    <input id="my-checkbox" type="checkbox">
-    <p id="checkbox-text"></p>
+    <input class="my-checkbox" type="checkbox">
+    <p class="checkbox-text"></p>
 </body>
 </html>
