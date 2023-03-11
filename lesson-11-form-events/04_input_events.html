@@ -12,6 +12,7 @@
             const textContainer = document.querySelector('.my-input-text');
 
             input.addEventListener('input', handleUserInput);
+            // input.addEventListener('change', handleUserInput);
             clearButton.addEventListener('click', handleClearClick);
 
             function handleUserInput() {
@@ -37,11 +38,13 @@
     </script>
 </head>
 <body>
+<form>
     <input class="my-input" type="text">
     <button class="clear-button">Clear</button>
     <p class="my-input-text"></p>
 
     <label><input class="my-checkbox" type="checkbox"> Я згоден</label>
     <p class="checkbox-text"></p>
+</form>
 </body>
 </html>

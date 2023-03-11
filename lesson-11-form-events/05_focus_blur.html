@@ -3,6 +3,9 @@
 <head>
     <title>Події focus та blur</title>
     <style>
+        label {
+            display: block;
+        }
         input {
             outline: none
         }
@@ -29,9 +32,18 @@
 </head>
 <body>
 <form>
-    First <input type="text" name="first" value=""/> <br/>
-    Second <input type="text" name="second" value=""/> <br/>
-    Third <input type="text" name="third" value=""/> <br/>
+    <label>
+        First
+        <input type="text" name="first" value=""/>
+    </label>
+    <label>
+        Second
+        <input type="text" name="second" value=""/>
+    </label>
+    <label>
+        Third
+        <input type="text" name="third" value=""/>
+    </label>
 </form>
 </body>
 </html>
