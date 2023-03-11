@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Події focus та blur</title>
+    <title>Select and options</title>
     <style>
         label {
             display: block;
@@ -28,7 +28,6 @@
             }
 
             function reset(event) {
-                event.preventDefault();
                 fruitSelector.selectedIndex = -1;
                 // fruitSelector.value = null;
                 console.log(fruitSelector.value);
@@ -40,7 +39,6 @@
 <body>
 <form>
     <h1>Select Option Example</h1>
-
     <label>
         Select a fruit:
         <select class="fruits">
@@ -50,8 +48,7 @@
             <option value="pear">Pear</option>
         </select>
     </label>
-
-    <button class="btn">Reet selector</button>
 </form>
+<button class="btn">Reset selector</button>
 </body>
 </html>
