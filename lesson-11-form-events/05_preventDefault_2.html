@@ -3,10 +3,9 @@
 <head>
     <title>preventDefault</title>
     <script>
-
-        window.addEventListener('load', function () {
-            let input = document.querySelector('input');
-            let log = document.querySelector('#log');
+        window.addEventListener('DOMContentLoaded', function () {
+            const input = document.querySelector('input');
+            const log = document.querySelector('.log');
 
             input.addEventListener('keypress', function (e) {
                 if (e.charCode <= '47' || e.charCode >= '57') {
@@ -21,6 +20,6 @@
 </head>
 <body>
 <input type="text"/>
-<p id="log"></p>
+<p class="log"></p>
 </body>
 </html>

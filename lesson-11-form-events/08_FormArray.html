@@ -3,21 +3,22 @@
 <head>
     <title>Работа с HTML формой</title>
     <script>
-        window.onload = function () {
+        window.addEventListener('DOMContentLoaded', function () {
+
             const f = document.forms[0];     // отримання першої форми на сторінці.
-            
+
             f.elements[0].value = 'text';    // зміна першого за рахунком поля введення у формі.
             f.elements[1].value = 'text';
             f.elements[2].value = 'text';
-        }
+        });
     </script>
 </head>
 <body>
-    <form>
-        Им'я <input type="text" value=" " /><br />
-        Фамілія<input type="text" value=" " /><br />
-        Вік<input type="text" value=" " /><br />
-        <input type="button" value="Регистрация" />
-    </form>
+<form>
+    Им'я <input type="text" value=" "/><br/>
+    Фамілія<input type="text" value=" "/><br/>
+    Вік<input type="text" value=" "/><br/>
+    <input type="button" value="Регистрация"/>
+</form>
 </body>
 </html>

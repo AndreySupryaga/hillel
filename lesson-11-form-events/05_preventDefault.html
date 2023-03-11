@@ -3,7 +3,7 @@
 <head>
     <title>preventDefault</title>
     <script>
-        window.addEventListener('HT', function () {
+        window.addEventListener('DOMContentLoaded', function () {
             document.forms[0].addEventListener('submit', function (e) {
                 if (document.forms[0].name.value.length == 0) {
                     // Если поле ввода пустое отменить действие по умолчанию, которое связанно с событием.

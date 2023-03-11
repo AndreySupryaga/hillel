@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Події focus та blur</title>
+    <style>
+        input {
+            outline: none
+        }
+    </style>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            const inputs = document.querySelectorAll('input');
+
+            inputs.forEach(input => {
+                input.addEventListener('focus', handlerFocus);
+                input.addEventListener('blur', handlerBlur);
+            })
+
+            function handlerFocus() {
+                this.style.border = '2px solid red';
+            }
+
+            function handlerBlur() {
+                this.style.border = '2px dotted green';
+            }
+        })
+    </script>
+</head>
+<body>
+<form>
+    First <input type="text" name="first" value=""/> <br/>
+    Second <input type="text" name="second" value=""/> <br/>
+    Third <input type="text" name="third" value=""/> <br/>
+</form>
+</body>
+</html>
