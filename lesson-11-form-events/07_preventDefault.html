@@ -8,11 +8,20 @@
             const log = document.querySelector('.log');
 
             input.addEventListener('keypress', function (e) {
+                console.log('keypress');
                 if (e.charCode <= '47' || e.charCode >= '57') {
                     // якщо натиснута кнопка не 0 - 9 скасувати дію за умовчанням.
                     e.preventDefault();
                 }
                 log.innerText = `Key pressed: ${String.fromCharCode(e.charCode)}\ncharCode: ${e.charCode}`;
+            });
+
+            input.addEventListener('keydown', function (e) {
+                console.log('keydown');
+            });
+
+            input.addEventListener('keyup', function (e) {
+                console.log('keyup');
             });
         });
 
