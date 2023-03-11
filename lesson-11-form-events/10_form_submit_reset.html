@@ -3,7 +3,8 @@
 <head>
     <title>Робота з HTML формою</title>
     <script>
-        window.onload = function () {
+        window.addEventListener('DOMContentLoaded', function () {
+
             const form = document.myForm; // одержання форми по імені
 
             // одержання елементів по імені
@@ -15,12 +16,12 @@
                 e.preventDefault();
                 console.log(this.elements);
             })
-        }
+        })
     </script>
 </head>
 <body>
     <form name="myForm">
-        Им'я <input type="text" value=" " name="fName" /><br />
+        Им'я <input type="text" value=" " name="fName" required/><br />
         Фамілія<input type="text" value=" " name="lName" /><br />
         Вік<input type="text" value=" " name="age" /><br />
         <button type="reset">Reset</button>

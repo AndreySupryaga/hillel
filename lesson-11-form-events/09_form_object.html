@@ -3,14 +3,15 @@
 <head>
     <title>Робота з HTML формою</title>
     <script>
-        window.onload = function () {
+        window.addEventListener('DOMContentLoaded', function () {
+
             const f = document.myForm; // одержання форми по імені
 
             // одержання елементів по імені
             f.fName.value = 'fName';
             f.lName.value = 'lName';
             f.age.value = 'age';
-        }
+        });
     </script>
 </head>
 <body>
