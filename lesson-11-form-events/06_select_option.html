@@ -2,46 +2,59 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Select and options</title>
-    <style>
-        label {
-            display: block;
-        }
-
-        input {
-            outline: none
-        }
-    </style>
-
     <script>
         window.addEventListener('DOMContentLoaded', function () {
             const btn = document.querySelector('.btn');
-            const fruitSelector = document.querySelector('.fruits');
+            const fruit = document.querySelector('.fruits');
 
-            fruitSelector.addEventListener('change', selectFruit);
+            fruit.addEventListener('change', handlerSelectFruit);
             btn.addEventListener('click', reset);
 
-            function selectFruit(event) {
-                event.preventDefault();
-                console.log(fruitSelector.value);
-                console.log(fruitSelector.selectedIndex);
-                console.log(fruitSelector.options);
+            function handlerSelectFruit(event) {
+                console.log(fruit.value);
+                console.log(fruit.selectedIndex);
+                console.log(fruit.options);
             }
 
-            function reset(event) {
-                fruitSelector.selectedIndex = -1;
+            function reset() {
+                fruit.selectedIndex = -1;
                 // fruitSelector.value = null;
-                console.log(fruitSelector.value);
-                console.log(fruitSelector.selectedIndex);
+                console.log(fruit.value);
+                console.log(fruit.selectedIndex);
             }
+
+            const fruitMultiple = document.querySelector('.fruits-multiple');
+
+            fruitMultiple.addEventListener('change', handlerSelectMultipleFruit);
+
+            function handlerSelectMultipleFruit() {
+                console.log(fruitMultiple.value);
+                const selectedFruits = [];
+                for (const option of this.options) {
+                    if (option.selected) {
+                        selectedFruits.push(option.value);
+                    }
+                }
+                console.log('You selected: ', selectedFruits);
+            }
+
         })
     </script>
 </head>
 <body>
 <form>
-    <h1>Select Option Example</h1>
     <label>
         Select a fruit:
         <select class="fruits">
+            <option value="apple">Apple</option>
+            <option value="banana" selected>Banana</option>
+            <option value="orange">Orange</option>
+            <option value="pear">Pear</option>
+        </select>
+    </label><br>
+    <label>
+        Select one or more fruits::
+        <select class="fruits-multiple" multiple>
             <option value="apple">Apple</option>
             <option value="banana" selected>Banana</option>
             <option value="orange">Orange</option>
