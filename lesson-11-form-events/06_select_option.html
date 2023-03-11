@@ -4,24 +4,17 @@
     <title>Select and options</title>
     <script>
         window.addEventListener('DOMContentLoaded', function () {
-            const btn = document.querySelector('.btn');
             const fruit = document.querySelector('.fruits');
 
             fruit.addEventListener('change', handlerSelectFruit);
-            btn.addEventListener('click', reset);
 
-            function handlerSelectFruit(event) {
+            function handlerSelectFruit() {
                 console.log(fruit.value);
                 console.log(fruit.selectedIndex);
                 console.log(fruit.options);
             }
 
-            function reset() {
-                fruit.selectedIndex = -1;
-                // fruitSelector.value = null;
-                console.log(fruit.value);
-                console.log(fruit.selectedIndex);
-            }
+            // *******************************************************************************************
 
             const fruitMultiple = document.querySelector('.fruits-multiple');
 
@@ -36,6 +29,20 @@
                     }
                 }
                 console.log('You selected: ', selectedFruits);
+            }
+
+            // *******************************************************************************************
+
+            const btn = document.querySelector('.btn');
+
+            btn.addEventListener('click', reset);
+
+            function reset() {
+                fruit.selectedIndex = -1;
+                fruitMultiple.selectedIndex = -1;
+                // fruitSelector.value = null;
+                console.log(fruit.value);
+                console.log(fruit.selectedIndex);
             }
 
         })
@@ -56,8 +63,8 @@
         Select one or more fruits::
         <select class="fruits-multiple" multiple>
             <option value="apple">Apple</option>
-            <option value="banana" selected>Banana</option>
-            <option value="orange">Orange</option>
+            <option value="banana">Banana</option>
+            <option value="orange" selected>Orange</option>
             <option value="pear">Pear</option>
         </select>
     </label>
