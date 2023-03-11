@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Scroll</title>
+    <style>
+        body {
+            transition: all 200ms linear;
+        }
+    </style>
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            window.addEventListener('resize', function() {
+                const width = window.innerWidth;
+
+                if (width < 600) {
+                    document.body.style.backgroundColor = "red";
+                } else if (width < 1200) {
+                    document.body.style.backgroundColor = "green";
+                } else {
+                    document.body.style.backgroundColor = "blue";
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<p>Resize the window to see the background color change.</p>
+</body>
+</html>
