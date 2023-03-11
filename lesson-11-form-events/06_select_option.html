@@ -6,6 +6,7 @@
         label {
             display: block;
         }
+
         input {
             outline: none
         }
@@ -13,37 +14,44 @@
 
     <script>
         window.addEventListener('DOMContentLoaded', function () {
-            const inputs = document.querySelectorAll('input');
+            const btn = document.querySelector('.btn');
+            const fruitSelector = document.querySelector('.fruits');
 
-            inputs.forEach(input => {
-                input.addEventListener('focus', handlerFocus);
-                input.addEventListener('blur', handlerBlur);
-            })
+            fruitSelector.addEventListener('change', selectFruit);
+            btn.addEventListener('click', reset);
 
-            function handlerFocus() {
-                this.style.border = '2px solid red';
+            function selectFruit(event) {
+                event.preventDefault();
+                console.log(fruitSelector.value);
+                console.log(fruitSelector.selectedIndex);
+                console.log(fruitSelector.options);
             }
 
-            function handlerBlur() {
-                this.style.border = '2px dotted green';
+            function reset(event) {
+                event.preventDefault();
+                // fruitSelector.selectedIndex = -1;
+                fruitSelector.value = null;
+                console.log(fruitSelector.value);
+                console.log(fruitSelector.selectedIndex);
             }
         })
     </script>
 </head>
 <body>
 <form>
+    <h1>Select Option Example</h1>
+
     <label>
-        First
-        <input type="text" name="first" value=""/>
+        Select a fruit:
+        <select class="fruits">
+            <option value="apple">Apple</option>
+            <option value="banana" selected>Banana</option>
+            <option value="orange">Orange</option>
+            <option value="pear">Pear</option>
+        </select>
     </label>
-    <label>
-        Second
-        <input type="text" name="second" value=""/>
-    </label>
-    <label>
-        Third
-        <input type="text" name="third" value=""/>
-    </label>
+
+    <button class="btn">Reet selector</button>
 </form>
 </body>
 </html>
