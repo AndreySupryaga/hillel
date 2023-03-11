@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Scroll</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            overflow: auto;
+            margin-top: 30px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-right: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #fff;
+            background-color: #0077cc;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        .btn:hover {
+            background-color: #005ea6;
+        }
+    </style>
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            const box = document.querySelector('.box');
+            const btn = document.querySelector('.btn');
+
+            box.addEventListener('scroll', function() {
+                console.log(this.scrollTop);
+            });
+
+            btn.addEventListener('click', function() {
+                box.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</head>
+<body>
+<button class="btn">Scroll to top</button>
+<div class="box">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quisquam possimus veniam modi rem, iure consectetur, laudantium rerum nemo id dicta sed. Dignissimos, maxime, assumenda. Sapiente quo autem enim repudiandae. <br><br>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis pariatur ad facilis molestias praesentium, veritatis rem cumque facere temporibus animi repudiandae repellendus! Nostrum explicabo dolor laboriosam dolorum! Ipsum natus, unde.<br><br>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis pariatur ad facilis molestias praesentium, veritatis rem cumque facere temporibus animi repudiandae repellendus! Nostrum explicabo dolor laboriosam dolorum! Ipsum natus, unde.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis pariatur ad facilis molestias praesentium, veritatis rem cumque facere temporibus animi repudiandae repellendus! Nostrum explicabo dolor laboriosam dolorum! Ipsum natus, unde.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis pariatur ad facilis molestias praesentium, veritatis rem cumque facere temporibus animi repudiandae repellendus! Nostrum explicabo dolor laboriosam dolorum! Ipsum natus, unde.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis pariatur ad facilis molestias praesentium, veritatis rem cumque facere temporibus animi repudiandae repellendus! Nostrum explicabo dolor laboriosam dolorum! Ipsum natus, unde.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis pariatur ad facilis molestias praesentium, veritatis rem cumque facere temporibus animi repudiandae repellendus! Nostrum explicabo dolor laboriosam dolorum! Ipsum natus, unde.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis pariatur ad facilis molestias praesentium, veritatis rem cumque facere temporibus animi repudiandae repellendus! Nostrum explicabo dolor laboriosam dolorum! Ipsum natus, unde.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis pariatur ad facilis molestias praesentium, veritatis rem cumque facere temporibus animi repudiandae repellendus! Nostrum explicabo dolor laboriosam dolorum! Ipsum natus, unde.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis pariatur ad facilis molestias praesentium, veritatis rem cumque facere temporibus animi repudiandae repellendus! Nostrum explicabo dolor laboriosam dolorum! Ipsum natus, unde.
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Scroll</title>
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            window.addEventListener('scroll', populate);
+            populate(); // ініціалізація документа
+
+            function populate() {
+                while (true) {
+                    let windowRelativeBottom = document.documentElement.getBoundingClientRect().bottom;
+                    // console.log( windowRelativeBottom);
+                    // console.log( document.documentElement.clientHeight + 100);
+                    if (windowRelativeBottom > document.documentElement.clientHeight + 100) {
+                        break;
+                    }
+                    document.body.insertAdjacentHTML('beforeend', `<p>Date: ${new Date()}</p>`);
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+<h1>Прокрути мене</h1>
+</body>
+</html>
