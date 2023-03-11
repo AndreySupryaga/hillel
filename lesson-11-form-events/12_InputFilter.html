@@ -48,21 +48,23 @@
     </script>
 </head>
 <body>
-<p>
-    <label>Ім'я</label>
-    <input name="firstName"
-           data-chars-allowed="абвгґдеєжзиіїйклмнопрстуфхцчшщьюя"
-           data-message-id="firstNameError"
-    />
-    <span id="firstNameError" class="error-message">допускаються лише літери українського алфавіту</span>
-</p>
-<p>
-    <label>Поштовий індекс</label>
-    <input name="zip"
-           data-chars-allowed="1234567890"
-           data-message-id="zipError"
-    />
-    <span id="zipError" class="error-message">допускаються лише цифри</span>
-</p>
+<form>
+    <p>
+        <label>Ім'я</label>
+        <input name="firstName"
+               data-chars-allowed="абвгґдеєжзиіїйклмнопрстуфхцчшщьюя"
+               data-message-id="firstNameError"
+        />
+        <span id="firstNameError" class="error-message">допускаються лише літери українського алфавіту</span>
+    </p>
+    <p>
+        <label>Поштовий індекс</label>
+        <input name="zip"
+               data-chars-allowed="1234567890"
+               data-message-id="zipError"
+        />
+        <span id="zipError" class="error-message">допускаються лише цифри</span>
+    </p>
+</form>
 </body>
 </html>
