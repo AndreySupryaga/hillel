@@ -24,15 +24,28 @@
                 input.value = '';
             }
 
+            // *******************************************************************************************
+
             const checkbox = document.querySelector('.my-checkbox');
             const checkboxText = document.querySelector('.checkbox-text');
 
-            handleCheckboxChange();
             checkbox.addEventListener('change', handleCheckboxChange);
+
+            handleCheckboxChange();
 
             function handleCheckboxChange() {
                 checkboxText.textContent = checkbox.checked ? 'Чекбокс відзначений' : 'Чекбокс порожній';
             }
+
+            // *******************************************************************************************
+
+            const drinkValueContainer = document.querySelector('.drink-value-container');
+
+            document
+                .querySelector('.radio-container')
+                .addEventListener('change', () => {
+                    drinkValueContainer.textContent = document.querySelector('input[name="drink"]:checked').value;
+                })
         });
 
     </script>
@@ -45,6 +58,28 @@
 
     <label><input class="my-checkbox" type="checkbox"> Я згоден</label>
     <p class="checkbox-text"></p>
+    <hr>
+    <div class="radio-container">
+        <p>Що ти зазвичай любишь пити з печивом?</p>
+
+        <label>
+            <input type="radio" name="drink" value="tea">
+            Чай
+        </label>
+        <label>
+            <input type="radio" name="drink" value="coffee">
+            Кава
+        </label>
+        <label>
+            <input type="radio" name="drink" value="milk">
+            Молоко
+        </label>
+        <label>
+            <input type="radio" name="drink" value="juice">
+            Сік
+        </label>
+        <p>Value вибранного напою: <span class="drink-value-container"></span></p>
+    </div>
 </form>
 </body>
 </html>
