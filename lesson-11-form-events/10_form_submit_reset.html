@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Робота з HTML формою</title>
+    <script>
+        window.onload = function () {
+            const form = document.myForm; // одержання форми по імені
+
+            // одержання елементів по імені
+            form.fName.value = 'Bob';
+            form.lName.value = 'Simpson';
+            form.age.value = '42';
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                console.log(this.elements);
+            })
+        }
+    </script>
+</head>
+<body>
+    <form name="myForm">
+        Им'я <input type="text" value=" " name="fName" /><br />
+        Фамілія<input type="text" value=" " name="lName" /><br />
+        Вік<input type="text" value=" " name="age" /><br />
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
