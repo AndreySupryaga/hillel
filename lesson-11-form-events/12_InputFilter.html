@@ -23,10 +23,9 @@
         function init() {
 
             const inputs = document.querySelectorAll('input');
-
-            for (let i = 0; i < inputs.length; i++) {
-                inputs[i].addEventListener('keypress', keyFilter);
-            }
+            inputs.forEach(input => {
+                inputs.addEventListener('keypress', keyFilter);
+            })
 
             function keyFilter(e) {
                 // dataset - властивість, що дозволяє звернутися до атрибутів data-*
