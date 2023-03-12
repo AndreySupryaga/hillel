@@ -38,13 +38,11 @@
 
                 const allowedText = e.target.dataset.charsAllowed;
                 const symbol = String.fromCharCode(e.charCode).toLowerCase();
-                const elementId = e.target.dataset.messageId; // елемент, який необхідно відобразити у разі помилки
-                const element = document.getElementById(elementId);
 
                 if (allowedText.includes(symbol) && element) {
-                    element.style.visibility = 'hidden';
+                    this.nextElementSibling.style.visibility = 'hidden';
                 } else {
-                    element.style.visibility = 'visible';
+                    this.nextElementSibling.style.visibility = 'visible';
                     e.preventDefault();
                 }
             }
@@ -57,17 +55,15 @@
         <label>Ім'я</label>
         <input name="firstName"
                data-chars-allowed="абвгґдеєжзиіїйклмнопрстуфхцчшщьюя"
-               data-message-id="firstNameError"
         />
-        <span id="firstNameError" class="error-message">допускаються лише літери українського алфавіту</span>
+        <span class="error-message">допускаються лише літери українського алфавіту</span>
     </div>
     <div class="form-field">
         <label>Поштовий індекс</label>
         <input name="zip"
                data-chars-allowed="1234567890"
-               data-message-id="zipError"
         />
-        <span id="zipError" class="error-message">допускаються лише цифри</span>
+        <span class="error-message">допускаються лише цифри</span>
     </div>
 </form>
 </body>
