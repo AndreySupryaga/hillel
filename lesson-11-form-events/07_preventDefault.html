@@ -23,6 +23,10 @@
             input.addEventListener('keyup', function (e) {
                 console.log('keyup');
             });
+
+            document.querySelector('a').addEventListener('click', (e) => {
+                e.preventDefault();
+            })
         });
 
     </script>
@@ -31,6 +35,7 @@
 <form>
     <input/>
     <p class="log"></p>
+    <a href="https://google.com">Link</a>
 </form>
 </body>
 </html>
