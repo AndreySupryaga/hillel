@@ -5,12 +5,12 @@
     <script>
         window.addEventListener('DOMContentLoaded', function () {
 
-            const f = document.myForm; // одержання форми по імені
-
+            const form = document.myForm; // одержання форми по імені
+            console.log(form.elements);
             // одержання елементів по імені
-            f.fName.value = 'fName';
-            f.lName.value = 'lName';
-            f.age.value = 'age';
+            form.fName.value = 'fName';
+            form.lName.value = 'lName';
+            form.age.value = 'age';
         });
     </script>
 </head>

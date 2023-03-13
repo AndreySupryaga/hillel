@@ -33,7 +33,11 @@
 
         function init() {
             document.myForm.addEventListener('submit', function (event) {
+                console.log(this.elements);
+                console.log([...this.elements]);
+
                 event.preventDefault();
+
                 [...this.elements]
                     .filter(element => element.type !== 'submit')
                     .forEach(validateElement)
