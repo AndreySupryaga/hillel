@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Navigator</title>
+    <script>
+        // Створення нового об'єкта Date
+        const now = new Date();
+        const christmas = new Date(2023, 11, 25);
+        const birthday = Date.parse("March 14, 2022");
+
+        // Отримання значень з об'єкта Date
+        const year = now.getFullYear();
+        const month = now.getMonth();
+        const day = now.getDate();
+        const weekday = now.getDay();
+        const time = now.getTime();
+
+        // Зміна значень у об'єкті Date
+        now.setFullYear(2024);
+        now.setMonth(4);
+        now.setDate(15);
+        now.setHours(13);
+    </script>
+</head>
+<body></body>
+</html>
