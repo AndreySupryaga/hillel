@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Navigator</title>
+    <script>
+        function browserDetect() {
+            const userAgent = navigator.userAgent;
+            let browserName;
+
+            if (userAgent.match(/chrome|chromium|crios/i)) {
+                browserName = "chrome";
+            } else if (userAgent.match(/firefox|fxios/i)) {
+                browserName = "firefox";
+            } else if (userAgent.match(/safari/i)) {
+                browserName = "safari";
+            } else if (userAgent.match(/opr\//i)) {
+                browserName = "opera";
+            } else if (userAgent.match(/edg/i)) {
+                browserName = "edge";
+            } else {
+                browserName = "No browser detection";
+            }
+            console.log('browserName', browserName);
+        }
+
+        browserDetect();
+
+        navigator.geolocation.getCurrentPosition(function(position) {
+            console.log('широта', position.coords.latitude);
+            console.log('довгота', position.coords.longitude);
+        });
+
+    </script>
+</head>
+<body></body>
+</html>
