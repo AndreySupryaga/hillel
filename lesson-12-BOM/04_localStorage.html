@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Navigator</title>
+    <script>
+        window.addEventListener('load', () => {
+            const storageKey = 'data';
+            let data = getDatFromAPI();
+            const container = document.querySelector('.container');
+
+            function generateHTML(data) {
+                let tmpl = '';
+                for (const item of data) {
+                    tmpl += `<div>${item}</div>`
+                }
+                container.innerHTML = tmpl;
+            }
+
+            generateHTML(data);
+            window.myForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+                data.push(this.name.value);
+                this.name.value = '';
+                generateHTML(data);
+                sendDatToAPI(data);
+            })
+
+            function getDatFromAPI() {
+                const storageData = JSON.parse(localStorage.getItem(storageKey));
+                return storageData ?? [];
+            }
+
+            function sendDatToAPI(data) {
+                localStorage.setItem(storageKey, JSON.stringify(data));
+            }
+        })
+    </script>
+</head>
+<body>
+<form name="myForm">
+    <input placeholder="Введіть значення" type="text" name="name">
+    <button type="submit">Add</button>
+</form>
+<div class="container">
+
+</div>
+</body>
+</html>
