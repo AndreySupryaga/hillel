@@ -14,10 +14,6 @@ bodyEl.append(btnEl);
 
 const alertTmpl = '<button type="button" class="btn btn-primary js-selector">Hello world $</button>';
 
-$(alertTmpl)
-    .on('click', function () {
-        $(this).fadeOut(2000, () => {
-            alert('Ok')
-        });
-    })
-    .appendTo('body');
+$(alertTmpl).click(function () {
+    $(this).hide(1000);
+}).appendTo('body');
