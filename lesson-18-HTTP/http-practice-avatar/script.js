@@ -7,8 +7,3 @@ function handleResponse(data) {
     img.setAttribute('src', data.avatar_url);
     document.body.prepend(img);
 }
-
-
-const a = 1;
-
-console.log(a);
