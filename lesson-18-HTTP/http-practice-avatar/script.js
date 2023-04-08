@@ -1,6 +1,6 @@
-fetch('https://6429c27cb11efeb7598d765d.mockapi.io/api/v1/users')
-    .then(response => response.json())
-    .then(handleResponse);
+fetch('https://api.openweathermap.org/data/2.5/weather?q=LVIV&units=metric&APPID=5d066958a60d315387d9492393935c19')
+    .then((data) => data.json)
+    .then(console.log);
 
 function handleResponse(data) {
     const img = document.createElement('img');
