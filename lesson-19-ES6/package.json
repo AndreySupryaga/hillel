@@ -1,0 +1,19 @@
+{
+  "name": "lesson-19-es6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel src/ -o dist/build.js",
+    "serve": "http-server -c-1 -f"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
