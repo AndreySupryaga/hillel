@@ -4,6 +4,19 @@ const people = [
     {name: "Charlie", age: 35}
 ];
 
+
+function createArraysByForOf(data) {
+    let ages = [];
+    let names = [];
+
+    for (const {name, age} of data) {
+        names.push(name);
+        ages = [...ages, age];
+    }
+
+    return {names, ages};
+}
+
 function createArrays(data) {
     return data.reduce((acc, {name, age}) => {
         acc.ages.push(age);
