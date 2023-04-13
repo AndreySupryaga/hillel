@@ -20,3 +20,6 @@ console.log(set.values());
 console.log([...set.entries()]);
 
 console.log([...set].find(({id}) => id === 12).name);
+
+const setFromArr = new Set([1,2,3,4,5,5,3,21,]);
+console.log(setFromArr);
