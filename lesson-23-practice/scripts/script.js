@@ -21,14 +21,18 @@ getAndRenderUsers();
 addEventListeners();
 
 function getAndRenderUsers() {
-    model.getUser().then(view.renderUsers.bind(view));
+    model.getUser().then(renderUsers);
+}
+
+function renderUsers() {
+    view.renderUsers(model.users);
 }
 
 function addEventListeners() {
     $(selectors.addBtn).on('click', async () => {
         const value = $(selectors.addInput).eq(0).val();
         await model.addUser(value);
-        getAndRenderUsers();
+        renderUsers();
     });
 
     $(selectors.userContainer).on('click', selectors.editBtn, function () {
@@ -40,7 +44,7 @@ function addEventListeners() {
         const name = $(this).closest(selectors.userCard).find(selectors.editInput).val();
         const id = this.dataset.id;
         await model.editUser(id, name);
-        getAndRenderUsers();
+        renderUsers();
         $(this).closest(selectors.userCard).find(selectors.cardTitle).show();
         $(this).closest(selectors.userCard).find(selectors.editContainer).hide();
     })
@@ -50,7 +54,7 @@ function addEventListeners() {
         if (isDelete) {
             const id = this.dataset.id;
             await model.deleteUser(id);
-            getAndRenderUsers();
+            renderUsers();
         }
     })
 }

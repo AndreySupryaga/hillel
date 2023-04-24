@@ -1,7 +1,7 @@
 import {ApiService} from "./api.service.js";
 
 export class Model {
-    users = null;
+    users = [];
 
     async getUser() {
         this.users = await ApiService.getUsers();
@@ -9,14 +9,17 @@ export class Model {
     }
 
     async addUser(name) {
-        await ApiService.addUser(name);
+        const user = await ApiService.addUser(name);
+        this.users.push(user)
     }
 
     async editUser(id, name) {
-        await ApiService.editUser(id, name);
+        const user = await ApiService.editUser(id, name);
+        this.users.find(({id}) => id === user.id).name = user.name;
     }
 
     async deleteUser(id) {
-        await ApiService.deleteUser(id);
+        const user = await ApiService.deleteUser(id);
+        this.users = this.users.filter(({id}) => id !== user.id);
     }
 }
