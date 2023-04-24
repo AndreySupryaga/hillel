@@ -21,3 +21,12 @@
     width: 50px !important;
     height: 50px;
 }
+
+.add-new-user {
+    display: flex;
+    margin: 30px 0;
+}
+
+.edit-container {
+    display: none;
+}

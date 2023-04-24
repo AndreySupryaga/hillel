@@ -11,7 +11,14 @@ export class UserView {
                       <img class="card-img-top" src="${user.avatar}" alt="Card image cap">
                       <div class="card-body">
                         <h5 class="card-title">${user.name}</h5>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <div class="edit-container">
+                            <input class="edit-input form-control" value="${user.name}">
+                            <button class="btn btn-primary save-btn" data-id="${user.id}">Save</button>
+                        </div>
+                        <div class="action">
+                            <button class="btn btn-primary edit-btn">Edit</button>
+                            <button class="btn btn-primary delete-btn" data-id="${user.id}">Delete</button>
+                        </div>
                       </div>
                     </div>`
             }).join('');
