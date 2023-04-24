@@ -1,0 +1,23 @@
+.main-container {
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+.card.user-card {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 20px;
+    padding-left: 15px;
+}
+
+.user-card .card-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card-img-top {
+    width: 50px !important;
+    height: 50px;
+}
