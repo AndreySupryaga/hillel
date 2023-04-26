@@ -3,18 +3,18 @@
     margin: 0 auto;
 }
 
+.user-card .card-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .card.user-card {
     display: flex;
     align-items: center;
     flex-direction: row;
     margin-bottom: 20px;
     padding-left: 15px;
-}
-
-.user-card .card-body {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 }
 
 .card-img-top {
