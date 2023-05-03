@@ -52,7 +52,7 @@ module.exports = {
         static: {
             directory: path.join(__dirname, 'dist'),
         },
-        port: 3001,
+        port: 4200,
         compress: true,
         open: true,
         hot: true
