@@ -1,0 +1,21 @@
+{
+  "users": [
+    {
+      "name": "Marilyn Huel 2",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/808.jpg",
+      "createdAt": "2023-05-03T16:24:10.198Z",
+      "id": "1"
+    },
+    {
+      "name": "Elon Musk",
+      "email": "test@gmail.com",
+      "createdAt": "5/4/2023, 8:33:15 PM",
+      "id": 5
+    },
+    {
+      "name": "test 2",
+      "createdAt": "5/4/2023, 8:50:13 PM",
+      "id": 6
+    }
+  ]
+}
